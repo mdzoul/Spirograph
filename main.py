@@ -13,6 +13,7 @@ def random_color():
 
 
 def draw_polygon_spirograph(gap_size, sides):
+    tim.speed(0)
     tim.hideturtle()
     for _ in range(int(360 / gap_size)):
         tim.color(random_color())
@@ -23,6 +24,7 @@ def draw_polygon_spirograph(gap_size, sides):
 
 
 def draw_circle_spirograph(gap_size):
+    tim.speed(0)
     tim.hideturtle()
     for _ in range(int(360 / gap_size)):
         tim.color(random_color())
@@ -33,7 +35,6 @@ def draw_circle_spirograph(gap_size):
 tim = Turtle()
 
 for num_sides in range(3, 11):
-    tim.speed(0)
     draw_polygon_spirograph(5, num_sides)
     tim.reset()
 
